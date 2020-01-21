@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">PerpuleAppTest</string>
-    <string name = "front_screen">Welcome</string>
+    <string name="front_screen">Welcome</string>
 </resources>
