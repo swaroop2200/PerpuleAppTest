@@ -18,6 +18,5 @@ class SignUpViewModel : ViewModel() {
             return
         }
         authListener?.onStarted()
-
     }
 }

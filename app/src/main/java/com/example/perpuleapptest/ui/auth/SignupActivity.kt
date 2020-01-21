@@ -18,21 +18,10 @@ class SignupActivity : AppCompatActivity(), SignUpListener {
         super.onCreate(savedInstanceState)
 
 
-        val binding: ActivitySignUpBinding
-                = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
+        val binding: ActivitySignUpBinding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
         val viewModel = ViewModelProviders.of(this).get(SignUpViewModel::class.java)
         binding.viewmodel = viewModel
-
         viewModel.authListener = this
-
-        //viewModel.getLoggedInUser().observe(this, Observer { user ->
-            //if(user != null){
-             //   Intent(this, HomeActivity::class.java).also {
-                //    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-              //      startActivity(it)
-            //    }
-          //  }
-        //})
 
     }
 
