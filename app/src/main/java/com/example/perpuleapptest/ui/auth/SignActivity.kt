@@ -21,7 +21,7 @@ class SignActivity : AppCompatActivity(), SignUpListener {
         val binding: ActivitySignUpBinding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
         val viewModel = ViewModelProviders.of(this).get(SignUpViewModel::class.java)
         binding.viewmodel = viewModel
-        viewModel.authListener = this
+        viewModel.signupListener = this
 
     }
 
@@ -38,3 +38,5 @@ class SignActivity : AppCompatActivity(), SignUpListener {
         Toast.makeText(this,message, Toast.LENGTH_SHORT)
     }
 }
+
+
