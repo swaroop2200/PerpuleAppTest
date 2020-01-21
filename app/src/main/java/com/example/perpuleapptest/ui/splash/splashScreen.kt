@@ -5,8 +5,8 @@ import java.lang.Exception
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.perpuleapptest.MainActivity
 import com.example.perpuleapptest.R
+import com.example.perpuleapptest.ui.auth.LoginActivity
 
 class ActivitySplash : AppCompatActivity() {
 
@@ -20,7 +20,7 @@ class ActivitySplash : AppCompatActivity() {
                 try {
                     Thread.sleep(2950)
                     val intent = Intent(baseContext,
-                        MainActivity::class.java)
+                        LoginActivity::class.java)
                     startActivity(intent)
                 }
                 catch (e: Exception)

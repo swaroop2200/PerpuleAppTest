@@ -2,8 +2,7 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:orientation="vertical"
@@ -20,14 +19,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:text = "@{viewmodel.email}"
             android:hint="Email" />
         <!-- Password Label -->
         <EditText android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:text = "@{viewmodel.password}"
             android:hint="Password"/>
         <Button
             android:id="@+id/btn_login"
@@ -36,7 +33,6 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
-            android:onClick="@{viewmodel::check}"
             android:text="Login"/>
         <TextView android:id="@+id/link_signup"
             android:layout_width="fill_parent"
