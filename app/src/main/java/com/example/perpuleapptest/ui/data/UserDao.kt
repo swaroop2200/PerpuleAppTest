@@ -9,10 +9,10 @@ import androidx.room.Query
 @Dao
 interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(user: User) : Long
+    fun upsert(user:User) : Long
 
-    @Query("SELECT * FROM login WHERE emailId LIKE :email and :password")
-    fun getUser(email: String,password:String) : User
+    //@Query("SELECT * FROM login WHERE emailId LIKE :email and :password")
+   // fun getUser(email: String,password:String) : User
 
 
 }

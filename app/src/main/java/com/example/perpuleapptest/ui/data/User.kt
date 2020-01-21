@@ -1,9 +1,11 @@
 package com.example.perpuleapptest.ui.data
 
+
+
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-const val CURRENT_USER_ID = 0
+
 
 @Entity(tableName = "Login")
 data class User(

@@ -7,6 +7,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.example.perpuleapptest.R
 import com.example.perpuleapptest.databinding.ActivityLoginBinding
+import com.example.perpuleapptest.ui.data.UserDatabase
+import com.example.perpuleapptest.ui.repository.UserRepo
 
 class LoginActivity : AppCompatActivity(),AuthListener {
 
@@ -15,9 +17,14 @@ class LoginActivity : AppCompatActivity(),AuthListener {
         setContentView(R.layout.activity_login)
         val binding: ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
         val viewModel = ViewModelProviders.of(this).get(LoginViewModel::class.java)
+
+        val db = UserDatabase(this)
+        viewModel.repo=UserRepo(db)
+
         binding.viewModel = viewModel
 
         viewModel.authListener = this
+
     }
 
     override fun onStarted() {
