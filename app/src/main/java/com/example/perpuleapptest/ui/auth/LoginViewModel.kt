@@ -14,18 +14,13 @@ class LoginViewModel:ViewModel(){
 
     var authListener: AuthListener? = null
 
-    fun onLoginButtonClick(view: View) {
-        authListener?.onStarted()
-        if (email.isNullOrEmpty() || password.isNullOrEmpty()) {
-            authListener?.onFailure()
-            return
-        }
+    fun onLoginButtonClick(view:View) {
+        val intent = Intent(view.context,SignActivity::class.java)
+        view.context.startActivity(intent)
     }
 
     fun tosignup(view: View){
-        authListener?.onSuccess()
-
-        val intent = Intent(view.context,SignupActivity::class.java)
+        val intent = Intent(view.context,SignActivity::class.java)
         view.context.startActivity(intent)
 
         /*

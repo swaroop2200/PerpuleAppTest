@@ -9,14 +9,14 @@ class SignUpViewModel : ViewModel() {
     var password: String? = null
     var confirm: String? = null
 
-    var authListener: SignUpListener? = null
+    var signupListener: SignUpListener? = null
 
     fun home(view: View) {
-        authListener?.onStarted()
+        signupListener?.onStarted()
         if (email.isNullOrEmpty() || password.isNullOrEmpty()) {
-            authListener?.onFailure("Invalid email or password")
+            signupListener?.onFailure("Invalid email or password")
             return
         }
-        authListener?.onStarted()
+        signupListener?.onStarted()
     }
 }

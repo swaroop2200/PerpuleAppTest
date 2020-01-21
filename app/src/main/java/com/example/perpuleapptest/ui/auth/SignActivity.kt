@@ -12,7 +12,7 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
 
-class SignupActivity : AppCompatActivity(), SignUpListener {
+class SignActivity : AppCompatActivity(), SignUpListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +21,7 @@ class SignupActivity : AppCompatActivity(), SignUpListener {
         val binding: ActivitySignUpBinding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
         val viewModel = ViewModelProviders.of(this).get(SignUpViewModel::class.java)
         binding.viewmodel = viewModel
-        viewModel.authListener = this
+        viewModel.signupListener = this
 
     }
 
@@ -38,3 +38,5 @@ class SignupActivity : AppCompatActivity(), SignUpListener {
         Toast.makeText(this,message, Toast.LENGTH_SHORT)
     }
 }
+
+
