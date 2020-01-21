@@ -12,7 +12,7 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
 
-class SignupActivity : AppCompatActivity(), SignUpListener {
+class SignActivity : AppCompatActivity(), SignUpListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
